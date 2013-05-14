@@ -9,47 +9,57 @@
    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
     <link href="css/docs.css" rel="stylesheet" />
    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        var tb_task;
+        $(function () {
+
+            tb_task = $("#tb_task");
+            //默认最后一行隐藏
+            $("tr:last", tb_task).hide();
+            //
+            $("#update_title").hide();
+            $("#task_row_title").click(function () {
+                $("tr:last", tb_task).toggle();
+            }).css("cursor", "pointer").hover(
+                function () {
+                    $("#update_title").show();
+                },
+                function () {
+                    $("#update_title").hide();
+                }
+            );
+
+            $("#update_title").attr("title", "编辑").tooltip();
+        });
+    </script>
 </head>
 <body>
 
     <div style="padding: 20px;">
-        <table class="table table-bordered" style="width:600px;background-color:#fff;">
+        <table id="tb_task" class="table table-bordered table-condensed" style="width:600px;background-color:#fff;">
             <tbody>
                 <tr>
-                    <td>
-                        <div class="row-fluid">
-                            <div class="span1">
-                                <input type="checkbox" /></div>
-                            <div class="span11">标题</div>
+                    <td colspan="4">
+                        <div id="task_row" class="row-fluid" style="margin-top:5px;">
+                            <div id="task_row_finish" class="span1">
+                                <label class="checkbox">
+                                    <input type="checkbox">
+                                </label>
+                            </div>
+                            <div id="task_row_title" class="span9">标题<i id="update_title" class="icon-edit"></i></div>
+                            <div id="task_row_status" class="span2">已完成</div>
                         </div>
                     </td>
                 </tr>
                  <tr>
-                    <td>
-                      <table class="table table-bordered" >
-                          <tr>
-                              <td>11</td>
-                              <td>11</td>
-                          </tr>
-                      </table>
-                    </td>
+                     <td>11</td>
+                     <td>11</td>
+                     <td>11</td>
+                     <td>11</td>
                 </tr>
             </tbody>
         </table>
        
     </div>
-
-   <div class="bs-docs-example">
-            <div class="navbar">
-              <div class="navbar-inner">
-                
-              </div>
-                 <div class="navbar-inner">
-                
-              </div>
-            </div>
-          </div>
-
-
 </body>
 </html>
