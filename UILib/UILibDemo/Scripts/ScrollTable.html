@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script src="jquery-paged-scroll/src/jquery-paged-scroll.js"></script>
+    <script type="text/javascript">
+        var index = 0;
+        var pageIndex = 0;
+        var pageRows = 20;
+        
+        $(function () {
+           
+            loadOnePage();
+
+            $(window).paged_scroll({
+                handleScroll: function (page, container, doneCallback) {
+                    setTimeout(function () {
+                        loadOnePage();
+                    }, 1000);
+
+                    return true;
+                },
+                // Uncomment to enable infinite scroll
+                //pagesToScroll : 5,
+                triggerFromBottom: '5%',
+                loader: '<div class="loader"></div>',
+                pagesToScroll: 120,
+                targetElement: $("#tbScroll tbody"),
+                debug: true
+
+            });
+        });
+        function loadOnePage() {
+
+            $.get("../LoadPageHandler.ashx?pageIndex=" + pageIndex + "&pageRows=" + pageRows, function (data) {
+                $("#tbScroll tbody").append(data);
+                pageIndex++;
+            });
+        }
+    </script>
+</head>
+<body>
+    <div style="width:100%;padding:20px;">
+        <table id="tbScroll" style="width:80%;height:100px;padding:0;margin:0;border:1px solid #dddddd;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>年龄</th>
+                    <th>邮件</th>
+                </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+        </table>
+       
+    </div>
+</body>
+</html>

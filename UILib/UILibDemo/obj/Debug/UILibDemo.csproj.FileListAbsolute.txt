@@ -9,3 +9,14 @@ E:\Program Develop\github\UILib\UILib\UILibDemo\obj\Debug\UILibDemo.dll
 E:\Program Develop\github\UILib\UILib\UILibDemo\obj\Debug\UILibDemo.pdb
 E:\Program Develop\github\UILib\UILib\UILibDemo\bin\Microsoft.Web.Infrastructure.xml
 E:\Program Develop\github\UILib\UILib\UILibDemo\obj\Debug\UILibDemo.csprojResolveAssemblyReference.cache
+E:\project\github\UILib\UILib\UILibDemo\bin\UILibDemo.dll
+E:\project\github\UILib\UILib\UILibDemo\bin\UILibDemo.pdb
+E:\project\github\UILib\UILib\UILibDemo\bin\Microsoft.Web.Infrastructure.dll
+E:\project\github\UILib\UILib\UILibDemo\bin\Microsoft.Web.Infrastructure.xml
+E:\project\github\UILib\UILib\UILibDemo\bin\EntityFramework.xml
+E:\project\github\UILib\UILib\UILibDemo\bin\zh-Hans\EntityFramework.resources.dll
+E:\project\github\UILib\UILib\UILibDemo\bin\zh-Hans\System.Web.Optimization.resources.dll
+E:\project\github\UILib\UILib\UILibDemo\bin\zh-Hans\System.Web.Providers.resources.dll
+E:\project\github\UILib\UILib\UILibDemo\obj\Debug\UILibDemo.csprojResolveAssemblyReference.cache
+E:\project\github\UILib\UILib\UILibDemo\obj\Debug\UILibDemo.dll
+E:\project\github\UILib\UILib\UILibDemo\obj\Debug\UILibDemo.pdb
